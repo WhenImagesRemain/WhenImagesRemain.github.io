@@ -9,14 +9,11 @@ var ffch='niet'
 var orientationX_offset=0;
 var orientationY_offset=0;
 var rotX, rotY;
-var gain =30;
+
 var zoomArray = [0,0,0,0,0,0,0];
 var zoomi=0;
 var zoomSmooth=0;
 var ii=0;
-var start=true;
-
-var relativeMouseX;
 function preload(){
   im=loadImage('Frame_order_When_Images_Remain_red.jpg')
 }
@@ -25,30 +22,47 @@ function setup() {
   //frameRate(1)
   createCanvas(windowWidth, windowHeight);
   aspectRatio=im.width/im.height;
+  btn = createButton("On mobile? Press for orientation permission!");
+  btn.position(10,windowHeight-30);
+  btn.mousePressed(function(){
+      DeviceOrientationEvent.requestPermission();
+      ffch='wel';
+      orientationX_offset=round(rotationX);
+      orientationY_offset=round(rotationY);
+  });
 
 }
 
 function draw() {
   background(0);
 
-  if(xPos>0){xPos=0}
-  if(xPos<-im.width+width/2){xPos=-im.width+width/2}
   //dx=10*(mouseX-windowWidth/2)/windowWidth;
+  dx=20*rotationY;
+  dy=1*rotationX;
 
-  relativeMouseX=(mouseX-width/2)/width;
-  dx=gain*relativeMouseX;
-  dy=gain*(mouseY-height/2)/height;
-
-  if(abs(relativeMouseX)<0.1){dx=0}
-
-  if(abs(relativeMouseX)<0.1){start=false}
-
-  if(start){dx=0};
   xPos=xPos-dx;
   yPos=yPos-dy;
-  //print("xPos=" + xPos +"   breedte dinges="+(im.width-width/2))
 
-  image(im,xPos,0,aspectRatio*(windowHeight),windowHeight)
+  image(im,xPos,0,aspectRatio*(windowHeight-40),windowHeight-40)
   //fill('magenta');
+
+  //ellipse(width / 2, height / 2, 30);
+  fill(0,0,255)
+
+  zoomArray[6]=zoomArray[5];
+  zoomArray[5]=zoomArray[4];
+  zoomArray[4]=zoomArray[3];
+  zoomArray[3]=zoomArray[2];
+  zoomArray[2]=zoomArray[1];
+  zoomArray[1]=zoomArray[0];
+  zoomArray[0]=accelerationZ;
+  zoomSmooth=0;
+  for(var i = 0; i<zoomArray.length; i++){
+    zoomSmooth=zoomSmooth+zoomArray[i];
+  }
+  zoomSmooth=zoomSmooth/zoomArray.length;
+
+  print(zoomSmooth)
+  ellipse(width / 2, height / 2, 10*zoomSmooth);
 
 }
