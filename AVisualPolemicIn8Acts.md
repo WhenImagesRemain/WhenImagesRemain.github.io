@@ -12,4 +12,6 @@ Maarten Wijntjes was asked by the TU Delft Library to curate a new glass slides 
 ![](contents/7.jpg)
 
 [p5.js demo Desktop](https://whenimagesremain.github.io/AVisualPolemicIn8ActsDesktop/)
+
+
 [p5.js demo Mobile](https://whenimagesremain.github.io/AVisualPolemicIn8ActsMobile/)
