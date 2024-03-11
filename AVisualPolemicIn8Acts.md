@@ -24,7 +24,7 @@ Putting two images next to each other does not only result in two pictures, but 
 ![](contents/prototype3.jpg)
 _On the left four images (two original, and two new). On the right the inter image space is filled by an generative AI tool._
 
-From then onward, Catelijne spend 8 consecutive days, 8 hours per with RunwayML performing a task that seemed trivial at the start (let AI figure it out) but turned out wickedly complex. [Here](https://collegerama.tudelft.nl/Mediasite/Channel/ide-symposium-vision-and-depiction-2024/watch/cc9690c3fac748e1919b015943bcd4861d) is a presentation of Catelijne van Middelkoop at [Vision and Depiction 2024](https://visionanddepiction.github.io, describing the process. Tl;dr: generative AI is a wonderful tool, but you still need a human artist prompting, selecting and iterating.
+From then onward, Catelijne spend 8 consecutive days, 8 hours per with RunwayML performing a task that seemed trivial at the start (let AI figure it out) but turned out wickedly complex. [Here](https://collegerama.tudelft.nl/Mediasite/Channel/ide-symposium-vision-and-depiction-2024/watch/cc9690c3fac748e1919b015943bcd4861d) is a presentation of Catelijne van Middelkoop at [Vision and Depiction 2024](https://visionanddepiction.github.io), describing the process. Tl;dr: generative AI is a wonderful tool, but you still need a human artist prompting, selecting and iterating.
 
 Then the harrowing moments arrived where we had to print the AI  overlay, glue it on perspex panels and pray that they aligned with the actual lanterns slides. Off course they didn't, but in the end they did:
 
@@ -36,7 +36,7 @@ _Prints about to be glued to the perspex._
 ![](contents/5.jpg)
 ![](contents/6.jpg)
 ![](contents/7.jpg)
-_The final results! Off course better experience in reality._
+_The final results! Off course better experienced in reality._
 
 
 [p5.js demo Desktop](https://whenimagesremain.github.io/AVisualPolemicIn8ActsDesktop/)
