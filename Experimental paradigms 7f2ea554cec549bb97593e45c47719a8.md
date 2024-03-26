@@ -17,51 +17,51 @@ This may be due to the wrong path being called for. To fix this navigate to the 
 
 ```jsx
  **images[i] = loadImage("img/" + filenames[i]);
- 
+
  //or
- 
+
  images[i] = loadImage("images/" + filenames[i]);**
 ```
 
-![importannots-experiment.gif](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8/importannots-experiment.gif)
+![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)
 
-**[ImportAnnots](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[ImportAnnots](Experimental%20paradigms.md)**
 
-![zoommaps-experiment.gif](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8/zoommaps-experiment.gif)
+![zoommaps-experiment.gif](Experimental%20paradigms/zoommaps-experiment.gif)
 
-**[ZoomMaps](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[ZoomMaps](Experimental%20paradigms.md)**
 
-![bubbleview-experiment.gif](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8/bubbleview-experiment.gif)
+![bubbleview-experiment.gif](Experimental%20paradigms/bubbleview-experiment.gif)
 
-**[BubbleView](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[BubbleView](Experimental%20paradigms.md)**
 
-![codecharts-experiment.gif](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8/codecharts-experiment.gif)
+![codecharts-experiment.gif](Experimental%20paradigms/codecharts-experiment.gif)
 
-**[CodeCharts](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[CodeCharts](Experimental%20paradigms.md)**
 
-![visualsearch-experiment.gif](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8/visualsearch-experiment.gif)
+![visualsearch-experiment.gif](Experimental%20paradigms/visualsearch-experiment.gif)
 
-**[Visual Search](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[Visual Search](Experimental%20paradigms.md)**
 
-![changeblindness-experiment.gif](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8/changeblindness-experiment.gif)
+![changeblindness-experiment.gif](Experimental%20paradigms/changeblindness-experiment.gif)
 
-**[Change Blindness](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[Change Blindness](Experimental%20paradigms.md)**
 
-![conspicuity-experiment.gif](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8/conspicuity-experiment.gif)
+![conspicuity-experiment.gif](Experimental%20paradigms/conspicuity-experiment.gif)
 
-**[Conspicuity](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[Conspicuity](Experimental%20paradigms.md)**
 
-![attributerating-experiment.gif](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8/attributerating-experiment.gif)
+![attributerating-experiment.gif](Experimental%20paradigms/attributerating-experiment.gif)
 
-**[Attribute rating](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[Attribute rating](Experimental%20paradigms.md)**
 
-![similarity-experiment.gif](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8/similarity-experiment.gif)
+![similarity-experiment.gif](Experimental%20paradigms/similarity-experiment.gif)
 
-**[Similarity](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[Similarity](Experimental%20paradigms.md)**
 
 no gif yet :(
 
-**[Classification](Experimental%20paradigms%207f2ea554cec549bb97593e45c47719a8.md)**
+**[Classification](Experimental%20paradigms.md)**
 
 ## Visual Search
 
