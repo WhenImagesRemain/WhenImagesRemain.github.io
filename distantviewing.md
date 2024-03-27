@@ -1,4 +1,4 @@
-# Introduction
+# Distant viewing
 
 Images consist of pixels, which is data that you can use to quantify relations between pictures. You can also let a computer interpret the content of an image, using some computer vision algorithm. As these algorithms are generally trained in a machine learning context (almost always some kind of deep learning network), they are always biased with respect to the training they received. Take this bias into account when using machine learning (AI).
 

@@ -1,4 +1,4 @@
-# Experimental paradigms
+# Visual paradigms
 
 Below you will find a set of experiments that are often used in visual perception. When we use it for education, we use a server for the data import and export. If you want temporary access you could contact me, otherwise you can adapt the code to download the data to your local computer.
 
