@@ -26,9 +26,15 @@ This may be due to the wrong path being called for. To fix this navigate to the 
  images[i] = loadImage("images/" + filenames[i]);**
 ```
 
-![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)
 
-**[ImportAnnots](Experimental%20paradigms.md)**
+:-------------------------|:-------------------------|:-------------------------
+:-------------------------|:-------------------------|:-------------------------
+![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)<br>
+**[ImportAnnots](#ImportAnnots)**|![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)<br>
+**[ImportAnnots](#ImportAnnots)**|![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)<br>
+**[ImportAnnots](#ImportAnnots)**
+:-------------------------|:-------------------------|:-------------------------
+
 
 ![zoommaps-experiment.gif](Experimental%20paradigms/zoommaps-experiment.gif)
 
