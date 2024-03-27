@@ -26,14 +26,11 @@ This may be due to the wrong path being called for. To fix this navigate to the 
  images[i] = loadImage("images/" + filenames[i]);**
 ```
 
+<!--
+![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)
 
-:-------------------------|:-------------------------|:-------------------------
-:-------------------------|:-------------------------|:-------------------------
-![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)<br>
-**[ImportAnnots](#ImportAnnots)**|![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)<br>
-**[ImportAnnots](#ImportAnnots)**|![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)<br>
-**[ImportAnnots](#ImportAnnots)**
-:-------------------------|:-------------------------|:-------------------------
+
+[ImportAnnots](#ImportAnnots)
 
 
 ![zoommaps-experiment.gif](Experimental%20paradigms/zoommaps-experiment.gif)
@@ -69,10 +66,15 @@ This may be due to the wrong path being called for. To fix this navigate to the 
 **[Similarity](Experimental%20paradigms.md)**
 
 no gif yet :(
-
 **[Classification](Experimental%20paradigms.md)**
+-->
+
+
+
 
 ## Visual Search
+![visualsearch-experiment.gif](Experimental%20paradigms/visualsearch-experiment.gif)
+
 
 - **What**: search for a predefined target in a scene
 - **Independent variables**: Target, scene
@@ -82,6 +84,7 @@ no gif yet :(
 [https://youtu.be/LWUi4E5s3vg](https://youtu.be/LWUi4E5s3vg)
 
 ## Change blindness
+![changeblindness-experiment.gif](Experimental%20paradigms/changeblindness-experiment.gif)
 
 - **What**: search for something changing in a scene
 - **Independent variables**: Target, scene
@@ -91,6 +94,7 @@ no gif yet :(
 [https://youtu.be/TvMfQ_rvvw0](https://youtu.be/TvMfQ_rvvw0)
 
 ## Conspicuity
+![conspicuity-experiment.gif](Experimental%20paradigms/conspicuity-experiment.gif)
 
 - **What**: introspectively judge visibility of a peripheral target
 - **Independent variables**: Target, scene
@@ -102,6 +106,7 @@ no gif yet :(
 [https://youtu.be/afljLkofeWc](https://youtu.be/afljLkofeWc)
 
 ## BubbleView
+![bubbleview-experiment.gif](Experimental%20paradigms/bubbleview-experiment.gif)
 
 - **What**: One of the four attention experiments from [TurkEyes](https://turkeyes.mit.edu/) that approximate eye movements, [also](http://bubbleview.namwkim.org/)
 - **Independent variables**: Scene
@@ -113,6 +118,7 @@ no gif yet :(
 [https://youtu.be/YtoIYI1scAk](https://youtu.be/YtoIYI1scAk)
 
 ## Attribute rating
+![attributerating-experiment.gif](Experimental%20paradigms/attributerating-experiment.gif)
 
 - **What**: Rating a certain attribute on a scale.
 - **Independent variables**: Attributes (do the same experiment with different adjectives), any stimulus variation
@@ -123,7 +129,7 @@ no gif yet :(
 [https://youtu.be/NGXfh_7Vm9Y](https://youtu.be/NGXfh_7Vm9Y)
 
 ## Similarity
-
+![similarity-experiment.gif](Experimental%20paradigms/similarity-experiment.gif)
 - **What**: Rating two stimuli with regard to their similarity
 - **Independent variables**:
 - **Dependent variables**: Similarity rating
@@ -133,6 +139,7 @@ no gif yet :(
 [https://youtu.be/MR9vSRWY2Ww](https://youtu.be/MR9vSRWY2Ww)
 
 ## CodeCharts
+![codecharts-experiment.gif](Experimental%20paradigms/codecharts-experiment.gif)
 
 - **What**: One of the four attention experiments from [TurkEyes](https://turkeyes.mit.edu/) that approximate eye tracking.
 - **Independent variables**: Scene
@@ -144,6 +151,7 @@ no gif yet :(
 [https://youtu.be/1WMdKtrd1fw](https://youtu.be/1WMdKtrd1fw)
 
 ## ZoomMaps
+![zoommaps-experiment.gif](Experimental%20paradigms/zoommaps-experiment.gif)
 
 - **What**: One of the four attention experiments from [TurkEyes](https://turkeyes.mit.edu/) that approximate eye tracking.
 - **Independent variables**: Scene
@@ -156,6 +164,7 @@ no gif yet :(
 [https://youtu.be/P_H632iqYKU](https://youtu.be/P_H632iqYKU)
 
 ## ImportAnnots
+![importannots-experiment.gif](Experimental%20paradigms/importannots-experiment.gif)
 
 - **What**: One of the four attention experiments from [TurkEyes](https://turkeyes.mit.edu/) that approximate eye tracking.
 - **Independent variables**: Scene
