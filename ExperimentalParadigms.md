@@ -1,10 +1,13 @@
 # Experimental paradigms
 
-Download your results here:
+Below you will find a set of experiments that are often used in visual perception. When we use it for education, we use a server for the data import and export. If you want temporary access you could contact me, otherwise you can adapt the code to download the data to your local computer.
+
+<!--Download your results here:
 
 [https://visualparadigms.io.tudelft.nl/](https://visualparadigms.io.tudelft.nl/)
+-->
 
-A complete list of p5.js paradigms can be found [here](https://editor.p5js.org/vcd.paradigms/collections/fL6StoJcy)
+A complete list of p5.js paradigms can be found [on our p5.js account](https://editor.p5js.org/vcd.paradigms/collections/fL6StoJcy), below you will find more information and tutorials.
 
 ### Common issues…
 
