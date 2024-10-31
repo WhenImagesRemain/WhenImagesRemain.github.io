@@ -9,7 +9,7 @@ The course, titled ‘When Images Remain,’ acknowledges the contemporary visua
 This course delves into visual design through three distinct perspectives. First, it engages in theoretical analysis of existing image collections (see our archive), incorporating insights from art history, design, perception, and computer science. The critical  examination considers both the creator's (sender) and the audience's (receiver) viewpoints, introducing the Vision and Depiction framework, which merges formal elements with contextual factors. Second, the course integrates empirical investigations. Students learn to conduct visual experiments, analyze data, and visually represent findings. The third perspective explores how computers interpret images, emphasizing the contribution of computational analysis to visual research and paying attention to ways in which visual research findings are shared and communicated.
 
 ## Literature & study materials
-- [A framework connecting vision and depiction](https://osf.io/geyht)
+- [A framework connecting vision and depiction](https://doi.org/10.1080/13506285.2024.2320762)
 
 ## Learning objectives
 
