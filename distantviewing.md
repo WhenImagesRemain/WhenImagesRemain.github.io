@@ -38,7 +38,7 @@ Here I used the code to create an average image of the bmw image set:
 It does not show much except the intuition that photos of BMWs (or cars in general) have varying vantage points, something we also found in a later analysis where we let a neural network map the most salient differences (where vantage point seemed to play an important role). Note that vantage point variation is not necessarily trivial, some things you only photograph from certain angles, such as a face: you hardly see portraits of backsides of human heads (yes, [i know](https://en.wikipedia.org/wiki/Not_to_Be_Reproduced) what you were thinking).
 
 ## Example 2: Mean color variations
-- [colab notebook](https://colab.research.google.com/drive/1XdmI7N2V3raNM1o2JFG-VEMJD0MM16vA?usp=sharing)
+- [colab notebook](https://colab.research.google.com/drive/1HLLqQ140Hha2IijyUMzuFwKYFoG9dx7l?usp=sharing)
 
 The first case study discussed in [Distant Viewing -
 Computational Exploration of Digital Images](https://mitpress.mit.edu/9780262546133/distant-viewing/) concerns the design of movie posters, and in particular their usage of colours. Let's try to loosely replicate their analysis.
@@ -67,7 +67,7 @@ In this example we will use annotations that are much more complex, and a dimens
 
 As you probably noticed, the x and y axis do not seem to bear meaning. Yet, there are all kinds of interesting clusters. On top you find the portraits and moving down you see more group portrait, more nudity. Moving right you may see some interiors of similar structure and moving down right you end up at landscapes. Going up, you may also find some still-lifes.
 
-The clusters (rather than the dimensions) are meaningful, and they are based on a neural network that was trained to classify objects: VGG19. The cool thing about these types of networks is that instead of reading out the last layer, which is basically the answer to the classification question, you can read out the layer before that, aka the 'fully connected layer'. In case of VGG19, that consists of 4096 values. So that's a whole lot more than the 3 colours! And what this marvellous tSNE does, is reducing these 4096 values to 2. An unimaginable endeavour, but as you saw: it works very well! Back in 2016, it was quite a hit when some people from Google Arts launched their [t-SNE Map](https://experiments.withgoogle.com/t-sne-map). 
+The clusters (rather than the dimensions) are meaningful, and they are based on a neural network that was trained to classify objects: VGG19. The cool thing about these types of networks is that instead of reading out the last layer, which is basically the answer to the classification question, you can read out the layer before that, aka the 'fully connected layer'. In case of VGG19, that consists of 4096 values. So that's a whole lot more than the 3 colours! And what this marvellous tSNE does, is reducing these 4096 values to 2. An unimaginable endeavour, but as you saw: it works very well! Back in 2016, it was quite a hit when some people from Google Arts launched their [t-SNE Map](https://experiments.withgoogle.com/t-sne-map).
 
 
 
