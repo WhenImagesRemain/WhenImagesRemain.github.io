@@ -56,8 +56,14 @@ What are the axes now? Indeed, on the x-axis we see brightness. On the y axis th
 ![](/contents/Imagespca_2024_12_08_14_04_47.jpg)
 
 
-## Example 3: tSNE and VGG18
+## Example 3: VGG19 and tSNE
 - [colab notebook](https://colab.research.google.com/drive/14UiXzk_4yemvDwGUM1fBwGrASH-sX1eB?usp=sharing)
+
+In the previous example, the mean colours are the 'annotations' of the image which consists of three values (RGB in our case). We used PCA to decorrelate these values, but also to _reduce_ the number of 'dimensions' of the annotation. PCA is just one of many dimensional reduction techniques that exist n data science. The nice thing about the PCA is that you can try to interpret the axes: they can be meaningful. In the previous example it looked a little bit that the PCA dimensions related to opponent colours, and we certainly found that the first axis (which is always the most important PCA dimension) was grayscale (brightness).
+
+In this example we will use annotations that are much more complex, and a dimensional reduction technique that does not result in meaningful dimensions. This does not sound very appealing but before we will explain the details, have a look at what it does to a collection of the [Getty](https://www.getty.edu), which comprises of 403 paintings.
+
+![](/contents/tSNE_Getty_small_2024_12_08_13_00_28.png) 
 
 <!--
 # Close Viewing
