@@ -1,45 +1,68 @@
 # Distant viewing
 
-Images consist of pixels, which is data that you can use to quantify relations between pictures. You can also let a computer interpret the content of an image, using some computer vision algorithm. As these algorithms are generally trained in a machine learning context (almost always some kind of deep learning network), they are always biased with respect to the training they received. Take this bias into account when using machine learning (AI).
+Digital images consist of pixels, which is data that you can computationally analyse to find _patterns_ within and between pictures. In the first part we will discuss patterns between pictures, which is in the context of visual studies is called "distant viewing".
+
 
 An accessible introduction is the book [Distant Viewing -
-Computational Exploration of Digital Images](https://mitpress.mit.edu/9780262546133/distant-viewing/) which only recently came out and can be freely accessed a MIT Press. In [chapter 2](https://direct.mit.edu/books/oa-monograph/chapter-pdf/2163341/c001100_9780262375160.pdf), the authors explain that before analysing images you first need to extract information, a process they call *annotation* which I rather replace with *computational annotation* as we obviously can also annotate with humans (crowdsourcing could solve a scaling problem and it would still be possible to do 'distant' viewing, i.e. compare a relatively large body of pictures).
+Computational Exploration of Digital Images](https://mitpress.mit.edu/9780262546133/distant-viewing/). In [chapter 2](https://direct.mit.edu/books/oa-monograph/chapter-pdf/2163341/c001100_9780262375160.pdf), the authors explain that before analysing images you first need to extract information, a process they call *annotation* which I rather replace with *computational annotation* as we obviously can also annotate with humans (crowdsourcing could solve a scaling problem and it would still be possible to do 'distant' viewing, i.e. compare a relatively large body of pictures).
 
-# Colab notebooks
-We will use python notebooks via [google colab](https://colab.research.google.com). They seem the most versatile tool to share data analysis although the downside is obviously that we rely on big tech. If this choice meets objection we have to find some alternative like [Jupyter](https://jupyter.org) but this will cost considerably more time and effort, and this is only a short course.
+In [this](https://library.imaging.org/jpi/articles/7/0/000501) pictorial research paper, which focused on _human_ annotations, a clarifying scheme is shown:
+![](/contents/jpi0174f1_online.jpg)
+In sum: you can do either close or distant viewing either with human or machine eyes, with the marked difference that for the human eye we can dissociate between objective and subjective annotations.
 
-Some extra advantages of google colab is that computation happens in the cloud (i.e. you do not need a powerful computer) and many AI (including generative stuff like Stable Diffusion) applications can be run. You probably need to upgrade your account if you want to do heavy computation: a colab pro account is 11 euro's and works quite good (but first check if you really need it), a colab pro+ account is 51 euro's and then you'll have the advantage that you can run them in the background (while closing your browser): not really necessary for this course I think!
+We will use python notebooks via [google colab](https://colab.research.google.com). Some advantages of google colab is that computation happens in the cloud (i.e. you do not need a powerful computer), you can easily access image folders from your google drive and I can share code (and datasets) with you. I made three very basic python notebooks that explain computational distant viewing, and that can be used for your own image sets.
 
-## Movieposter colors
+## Example datasets
+I created some example datasets on google drive. They generally contain small images (but not all so check before you run code) and in most cases the _lack_ metadata. The reason for that is to keep it simple (and I did not yet have time to create something easily accessible)
 
-![](/images/moviepostergrid.jpg)
+- [Getty paintings](https://drive.google.com/drive/folders/1b95b7TwcgzuCwrqsMlGfoDHnhZLRVdS4?usp=sharing) which are about 400 painting images, quite small so easy to load. They obviously originate from [the Getty](https://www.getty.edu).
+ - [BMW cars](https://drive.google.com/drive/folders/1aZP-E8jAYxaa7Ac_kJWkcMCy63IWYbxh?usp=sharing) a small subset of a BMW pictures set I found at [Kaggle](https://www.kaggle.com/datasets/occultainsights/bmw-cars-over-11k-labeled-images)
+- [Depicted faces](https://drive.google.com/drive/folders/1GU8aLHMRl2hepsDPV0AdvjkaK7rEqwo0?usp=sharing) taken from the [4tu data repository](https://doi.org/10.4121/uuid:3beee8ef-1b7e-451f-966f-13230cb2bbe7) and related to a [paper](https://library.imaging.org/ei/articles/32/11/art00014) where we analysed posture and colour of depicted faces.
+- [Flora](https://drive.google.com/drive/folders/1_W3BtNHjOvQTFTCc2n2e0qPBGnLPiHkS?usp=sharing) from the [Materials in Paintings](https://materialsinpaintings.tudelft.nl) dataset.
+- [Movie posters](https://drive.google.com/drive/folders/1TUQqo50wke6PSnM-EQdbpMF2QbD61I7z?usp=sharing) originally from this [Kaggle repository](https://www.kaggle.com/datasets/raman77768/movie-classifier).
+
+
+## Example 1: Average image calculation
+- [colab notebook](https://colab.research.google.com/drive/1XdmI7N2V3raNM1o2JFG-VEMJD0MM16vA?usp=sharing)
+
+An interesting way of finding patterns in image collections is taking the average. Per pixel you literally compute the average value, and you thus need to have images of exactly similar dimensions. Don't worry, image resizing is automatically done in the notebook.
+
+I think it is always interesting to take an average image, but you will notice that it does not always give satisfying insights: it really depends on your dataset! For faces it obviously works well, for movie posters much less, you can probably imagine why.
+
+The first time as saw an average picture was in a paper by [Aude Oliva and Antonio Torralba](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=8c59f2938877c7900573098f01def10f8dee508c), and one of the authors made [gallery](https://people.csail.mit.edu/torralba/gallery/#) and the artist [Jason Salavon](http://salavon.com) has made various average images since the 90's. Besides aesthetic appeal, they certainly let you 'distant view' an image set, for example [this](https://journals.ub.uni-heidelberg.de/index.php/dah/article/view/21640/15413) paper visualised differences across time in portrait painting.
+
+Here I used the code to create an average image of the bmw image set:
+
+![](/contents/bmw_small_average_booosted_2024_12_08_11_16_52.png)
+
+It does not show much except the intuition that photos of BMWs (or cars in general) have varying vantage points, something we also found in a later analysis where we let a neural network map the most salient differences (where vantage point seemed to play an important role). Note that vantage point variation is not necessarily trivial, some things you only photograph from certain angles, such as a face: you hardly see portraits of backsides of human heads (yes, [i know](https://en.wikipedia.org/wiki/Not_to_Be_Reproduced) what you were thinking).
+
+## Example 2: Mean color variations
+- [colab notebook](https://colab.research.google.com/drive/1XdmI7N2V3raNM1o2JFG-VEMJD0MM16vA?usp=sharing)
 
 The first case study discussed in [Distant Viewing -
 Computational Exploration of Digital Images](https://mitpress.mit.edu/9780262546133/distant-viewing/) concerns the design of movie posters, and in particular their usage of colours. Let's try to loosely replicate their analysis.
 
-In this [colab notebook](https://colab.research.google.com/drive/1drDMUUZ6gK2udRu9Frza_XjcNZBmttXD?usp=sharing) I analyse movies posters that I found on [Kaggle](https://www.kaggle.com/datasets/raman77768/movie-classifier/data). Imagedatasets come in all kinds of formats, this one is csv file with image names and their movie genre, and a subfolder with all the images. It looks like this:
+From the images we can collect all kinds of color data, for example the mean color channels. Depending on the color space you are woking in, that could be red, green and blue or hue, saturation and value for RGB and HSV spaces, respectively. To get an intuition whether these computations make sense, and align with what we see with our own eyes, _we use the thumbnail posters as coordinate markers_. Here is a plot of the mean red against green:
 
-![](/images/kagglePandasFile.jpg)
+![](/contents/Imagesred-green_2024_12_08_11_55_05.jpg)
 
-From the images we can collect all kinds of color information, for example the mean color channels. Depending on the color space you are woking it, that could be red, green and blue or hue, saturation and value for RGB and HSV spaces, respectively. To get an intuition whether these computations make sense, and allign with what we see with our own eyes, we can use the mean poster colors as coordinates to plot thumbnail posters, here you see saturation in the x-axis and value on the y-axis:
-![](/images/saturation_value.jpg)
+It looks pretty cool, and also like we are on to something because ... there is a clear pattern! This is called a correlation: red and green are correlated, when a poster has much red, it also has much green. Now an important 'dimensional reduction' procedure can be of help: [Principle Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis). In this case we start with three dimensions (red, green and blue) and we end up with three dimensions that are _decorrelated_. Without going in too much detail let's just check out the result:
 
-It looks pretty cool, and also like we are on to something because ... there is a clear pattern! But alas, the pattern is by construction: we wanted to plot from low saturated on the left (colourless) to high saturation on the right (colourful), and from dark to light in the vertical direction. Nevertheless, there is something interesting about the image, aside its prettiness, which is that apparently our color extraction works, so it is a sanity check that we did not make any mistakes.
+![](/contents/Imagespca_2024_12_08_11_55_05.jpg)
 
-Let's do two other color channels (feel free to try out other combinations in the colab notebook), red vs blue:
+What are the axes now? Indeed, on the x-axis we see brightness. On the y axis there seems to be a gradient from blue to red/yellow. So what would happen if we plot the second and third PCA dimension in one plot? Something with colour opponency?!
 
-![](/images/red_blue.jpg)
+![](/contents/Imagespca_2024_12_08_14_04_47.jpg)
 
-Here, there is a perhaps not entirely trivial pattern: red and blue seem to be correlated. You can find an explanation yourself.
 
-## Average image calculation
-An interesting way of finding patterns in image collections is taking the average. Per pixel you literally compute the average value, and you thus need to have images of exactly similar dimensions. Don't worry, the [colab notebook](https://colab.research.google.com/drive/1XdmI7N2V3raNM1o2JFG-VEMJD0MM16vA?usp=sharing) does this for you but be aware that everything gets scaled to a small square image.
+## Example 3: tSNE and VGG18
+- [colab notebook](https://colab.research.google.com/drive/14UiXzk_4yemvDwGUM1fBwGrASH-sX1eB?usp=sharing)
 
-For some reason I have a set of BMW photos that I used on other examples. Here I used it to create an average image:
+<!--
+# Close Viewing
 
-![](/images/bmw_small_average.png)
 
-It does not show much except the intuition that photos of BMWs (or cars in general) have varying vantage points, something we also found a later analysis where we let a neural network map the most salient differences (where vantage point seemed to play an important role). Note that vantage point variation is not necessarily trivial, some things you only photograph from certain angles, such as a face: you hardly see portraits of backsides of human heads.
 
 # Where to find all these images?
 
@@ -55,13 +78,7 @@ Alternatively, you can also create datasets 'manually'. Everyone always wants to
 
 There are places where to you can find preprocessed picture sets on websites that cater to machine learning, such as [Kaggle](https://www.kaggle.com) or [Papers with Code](https://paperswithcode.com/datasets?mod=images). Mind you that these picture sets are not a priori interesting, which is intentional as these sets often need to represent some real world aspect robustly and unbiased. Off course, they rarely do, which is were interesting stuff happens. And even if there is actually nothing interesting, it might still be a good exercise in the first part of the course.
 
-## Investigate latent images
-
-Generative networks were trained on images and can produce images themselves. The production relies on training which is somewhat comparable to human produced pictures (which also represent certain times and places in history). Therefore, you can also choose to study a network with a 'latent' image set: you can generate the dataset yourself and start your study.
 
 
-
-
-<!--
 Maybe something about latent images, i.e. information about a training set that is latently present in networks.
 -->
