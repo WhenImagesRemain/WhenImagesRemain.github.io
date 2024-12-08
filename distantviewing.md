@@ -63,7 +63,8 @@ In the previous example, the mean colours are the 'annotations' of the image whi
 
 In this example we will use annotations that are much more complex, and a dimensional reduction technique that does not result in meaningful dimensions. This does not sound very appealing but before we will explain the details, have a look at what it does to a collection of the [Getty](https://www.getty.edu), which comprises of 403 paintings.
 
-![](/contents/tSNE_Getty_small_2024_12_08_13_00_28.png) 
+[![Foo](/contents/tSNE_Getty_small_2024_12_08_13_00_28.png)](/contents/tSNE_Getty_small_2024_12_08_13_00_28.png)
+
 
 <!--
 # Close Viewing
