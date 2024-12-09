@@ -23,6 +23,16 @@ I created some example datasets on google drive. They generally contain small im
 - [Flora](https://drive.google.com/drive/folders/1_W3BtNHjOvQTFTCc2n2e0qPBGnLPiHkS?usp=sharing) from the [Materials in Paintings](https://materialsinpaintings.tudelft.nl) dataset.
 - [Movie posters](https://drive.google.com/drive/folders/1TUQqo50wke6PSnM-EQdbpMF2QbD61I7z?usp=sharing) originally from this [Kaggle repository](https://www.kaggle.com/datasets/raman77768/movie-classifier).
 
+### How to load images from google drive
+
+You can copy the above folders to your own google drive (there does not seem a way to mount a public drive). To give the colab notebook access to your drive you have to 'mount' it like:
+
+```
+from google.colab import drive
+drive.mount('/content/gdrive')
+```
+
+This will result in a pop-up where you need to login and give colab access to your drive. These lines of code are in all notebooks below. 
 
 ## Example 1: Average image calculation
 - [colab notebook](https://colab.research.google.com/drive/1XdmI7N2V3raNM1o2JFG-VEMJD0MM16vA?usp=sharing)
