@@ -7,8 +7,10 @@ An accessible introduction is the book [Distant Viewing -
 Computational Exploration of Digital Images](https://mitpress.mit.edu/9780262546133/distant-viewing/). In [chapter 2](https://direct.mit.edu/books/oa-monograph/chapter-pdf/2163341/c001100_9780262375160.pdf), the authors explain that before analysing images you first need to extract information, a process they call *annotation* which I rather replace with *computational annotation* as we obviously can also annotate with humans (crowdsourcing could solve a scaling problem and it would still be possible to do 'distant' viewing, i.e. compare a relatively large body of pictures).
 
 In [this](https://library.imaging.org/jpi/articles/7/0/000501) pictorial research paper, which focused on _human_ annotations, a clarifying scheme is shown:
-![](/contents/jpi0174f1_online.jpg)
-In sum: you can do either close or distant viewing either with human or machine eyes, with the marked difference that for the human eye we can dissociate between objective and subjective annotations.
+
+![](/contents/closedistant.png)
+
+In sum: you can do either close or distant viewing either with human or machine eyes, with the marked difference that for the human eye we can dissociate between objective and subjective annotations. The numbers in the figure denoted all the possible combinations of which the paper discussed the bold lined ones.  
 
 We will use python notebooks via [google colab](https://colab.research.google.com). Some advantages of google colab is that computation happens in the cloud (i.e. you do not need a powerful computer), you can easily access image folders from your google drive and I can share code (and datasets) with you. I made three very basic python notebooks that explain computational distant viewing, and that can be used for your own image sets.
 
