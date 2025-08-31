@@ -32,7 +32,10 @@ from google.colab import drive
 drive.mount('/content/gdrive')
 ```
 
-This will result in a pop-up where you need to login and give colab access to your drive. These lines of code are in all notebooks below. 
+This will result in a pop-up where you need to login and give colab access to your drive. These lines of code are in all notebooks below.
+
+<!--Another way is to create shortcuts [TBC]...-->
+
 
 ## Example 1: Average image calculation
 - [colab notebook](https://colab.research.google.com/drive/1XdmI7N2V3raNM1o2JFG-VEMJD0MM16vA?usp=sharing)
