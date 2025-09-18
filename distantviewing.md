@@ -32,7 +32,7 @@ from google.colab import drive
 drive.mount('/content/gdrive')
 ```
 
-This will result in a pop-up where you need to login and give colab access to your drive. These lines of code are in all notebooks below.
+This will result in a pop-up where you need to login and give colab access to your drive. *You do not have to check the boxes, only permit access to the files in your google drive.* These lines of code are in all notebooks below.
 
 <!--Another way is to create shortcuts [TBC]...-->
 
@@ -83,6 +83,26 @@ In this example we will use annotations that are much more complex, and a dimens
 As you probably noticed, the x and y axis do not seem to bear meaning. Yet, there are all kinds of interesting clusters. On top you find the portraits and moving down you see more group portrait, more nudity. Moving right you may see some interiors of similar structure and moving down right you end up at landscapes. Going up, you may also find some still-lifes.
 
 The clusters (rather than the dimensions) are meaningful, and they are based on a neural network that was trained to classify objects: VGG19. The cool thing about these types of networks is that instead of reading out the last layer, which is basically the answer to the classification question, you can read out the layer before that, aka the 'fully connected layer'. In case of VGG19, that consists of 4096 values. So that's a whole lot more than the 3 colours! And what this marvellous tSNE does, is reducing these 4096 values to 2. An unimaginable endeavour, but as you saw: it works very well! Back in 2016, it was quite a hit when some people from Google Arts launched their [t-SNE Map](https://experiments.withgoogle.com/t-sne-map).
+
+## Example 4: Creating metadata with ChatGPT
+
+In the examples above you have to do quite some handwork in retrieving the metadata. With visual inquiries using LMMs (Large Multimodal Models) we can use prompts instead. As we are interested in image sets, we still need some code to run the prompt through all these images, so we stil need python. Moreover, we need to integrate this prompting in python for which we need the API.
+
+You can get access to the API by going to [https://platform.openai.com/](https://platform.openai.com/) and then:
+- create an account and put a few dollars on your account.
+- Go to settings
+- At Billing you can transfer some dollars
+- Keep auto recharge *off* so you do not run into problems!
+- Go to API keys and press right top button '+Create new secret key'
+- After filling in a name and press again 'Create Secret Key' *copy the key to a safe place because you will not be able to retrieve it.
+- OpenAI does not recommend sharing this key.
+
+The possibilities are endless but this freedom does come at a cost. If you want to visualise and do some quantitative analysis you still have to convert the ChatGPT response to a number. In our example [ChatGPT API Colab](https://colab.research.google.com/drive/1fuX33s2okRlVd9KuMKdZWoMUgKchiQQr?usp=sharing) we choose to count the number of faces *and* how many of these faces were smiling. We put  these numbers in a table, export it to an excel file and also visualise in a 2D scatter plot: 
+
+[![Foo](/contents/painting_faces_plot-3.jpg)](/contents/painting_faces_plot-3.jpg)
+
+
+
 
 
 
